@@ -52,7 +52,7 @@ export default function Statistics() {
 
   useEffect(() => {
     const fetchStats = async () => {
-      const res = await fetch("https://backrecupython.onrender.com//graphql/", {
+      const res = await fetch("https://backrecupython.onrender.com/graphql/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
