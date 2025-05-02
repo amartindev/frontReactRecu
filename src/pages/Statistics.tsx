@@ -71,8 +71,8 @@ export default function Statistics() {
         }),
       });
       const { data } = await res.json();
-      setSalesByProduct(data.salesByProductSummary);
-      setSalesByMonth(data.salesByMonth);
+      setSalesByProduct(data.salesByProductSummary ?? []);
+      setSalesByMonth(data.salesByMonth ?? []);
       setLoading(false);
     };
 
