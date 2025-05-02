@@ -56,7 +56,7 @@ export default function Dashboard() {
         }),
       });
       const { data } = await res.json();
-      setSalesByProduct(data.salesByProductSummary);
+      setSalesByProduct(data.salesByProductSummary ?? []);
       setLoading(false);
     };
     fetchSales();

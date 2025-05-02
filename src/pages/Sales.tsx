@@ -38,7 +38,7 @@ export default function Dashboard() {
         }),
       });
       const { data } = await res.json();
-      setSales(data.allSales);
+      setSales(data.allSales ?? []);
       setLoading(false);
     };
     fetchSales();
